@@ -1,44 +1,73 @@
-# Emerald Bites
+# Emerald Bites: Irish Food Directory
 
-A modern website showcasing the rich culinary heritage of Ireland. From traditional dishes to contemporary interpretations, Emerald Bites is your guide to Irish cuisine.
+## Overview
+
+Emerald Bites is a comprehensive web-based directory showcasing the rich culinary heritage of Ireland. This project aims to provide an informative and visually appealing resource for food enthusiasts, travelers, and anyone interested in exploring authentic Irish cuisine.
+
+The directory features:
+- Detailed information about traditional Irish dishes
+- Reviews of top Irish restaurants across Dublin, Cork, Galway, and other locations
+- In-depth articles about Irish food culture and history
+- Beautiful imagery and modern, responsive design
+
+## Project Structure
+
+```
+Irish Food Directory/
+├── index.html                 # Main landing page
+├── dishes/                    # Information about Irish dishes
+│   ├── index.html             # Overview of Irish dishes
+│   ├── irish-stew.html        # Detailed page about Irish stew
+│   └── ...                    # Other dish pages
+├── restaurants/               # Restaurant reviews
+│   ├── index.html             # Overview of featured restaurants
+│   ├── brazen-head.html       # Review of The Brazen Head pub
+│   └── ...                    # Other restaurant reviews
+├── culture/                   # Articles about Irish food culture
+│   ├── index.html             # Overview of food culture topics
+│   ├── history.html           # History of Irish cuisine
+│   └── ...                    # Other cultural articles
+└── images/                    # Directory for all images
+```
 
 ## Features
 
-- Comprehensive guide to traditional Irish dishes
-- Restaurant recommendations across Ireland
-- Food blog with latest culinary adventures
-- Modern, responsive design
-- Interactive elements and smooth animations
+- **Responsive Design**: The directory is fully responsive and works seamlessly on desktop, tablet, and mobile devices.
+- **Modern UI**: Clean, attractive interface with intuitive navigation.
+- **Rich Content**: Comprehensive information about Irish cuisine, including recipes, historical context, and cultural significance.
+- **Interactive Elements**: Rating systems, image galleries, and interactive maps for restaurant locations.
 
 ## Technologies Used
 
 - HTML5
-- CSS3
-- JavaScript
-- AOS (Animate On Scroll) library
+- CSS3 (with custom properties/variables)
 - Font Awesome icons
+- Google Maps integration
+- Responsive design techniques
 
-## Setup
+## Future Enhancements
 
-1. Clone the repository
-2. Open index.html in your browser
-3. No build process required - it's a static website
+Planned future enhancements for the directory include:
+- User reviews and ratings system
+- Recipe database with search functionality
+- Interactive map of Irish food trails
+- Video content featuring cooking demonstrations
+- Integration with social media platforms
 
-## Structure
+## Credits
 
-- `/dishes` - Individual pages for each Irish dish
-- `/blog` - Food and travel blog posts
-- `/images` - Website images and assets
-- `/styles.css` - Main stylesheet
-
-## Contributing
-
-Feel free to submit issues and enhancement requests!
+This project was created based on extensive research on Irish cuisine, including information from:
+- Irish food historians and culinary experts
+- Traditional Irish cookbooks and recipes
+- Restaurant reviews and food blogs
+- Cultural and historical resources about Ireland
 
 ## License
 
-MIT License - feel free to use this code for your own projects!
+This project is available for educational and personal use.
 
 ## Contact
 
-For any queries, reach out to hello@emeraldbites.ie
+For more information about this project, please contact:
+- Email: info@emeraldbites.com
+- Website: www.emeraldbites.com 
