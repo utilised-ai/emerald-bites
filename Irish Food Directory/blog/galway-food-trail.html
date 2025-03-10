@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Weekend of Culinary Delights in Galway - Emerald Bites</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .blog-hero {
+            height: 60vh;
+            background-image: url('../images/blog/galway-food-trail.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .blog-title {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            text-align: center;
+            width: 100%;
+            padding: 0 1rem;
+        }
+
+        .blog-meta {
+            color: var(--accent-color);
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+            line-height: 1.8;
+        }
+
+        .blog-content h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .location-highlight {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .location-highlight h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-hero">
+        <div class="blog-title">
+            <h1>A Weekend of Culinary Delights in Galway</h1>
+            <div class="blog-meta">
+                <i class="far fa-calendar"></i> March 15, 2024
+                <span class="location-tag"><i class="fas fa-map-marker-alt"></i> Galway</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <article class="blog-content" data-aos="fade-up">
+            <p>Galway, the cultural heart of Ireland's west coast, is a food lover's paradise. From traditional Irish pubs serving hearty fare to innovative restaurants pushing culinary boundaries, this vibrant city offers an incredible range of dining experiences. Join me as I take you through a weekend of gastronomic discoveries in this charming coastal city.</p>
+
+            <h2>Day One: Markets and Traditional Tastes</h2>
+            <p>My culinary adventure began at the famous Galway Market, where local producers have been selling their wares for centuries. The air was filled with the aroma of freshly baked bread, local cheeses, and the day's catch from the Atlantic. I couldn't resist picking up some Connemara smoked salmon and artisanal cheeses for a picnic later.</p>
+
+            <div class="location-highlight">
+                <h3>Le Petit Pois</h3>
+                <p>For dinner, I visited Le Petit Pois, a charming restaurant that perfectly blends French culinary techniques with Irish ingredients. Their seafood dishes are particularly noteworthy, showcasing the best of Galway Bay's bounty.</p>
+                <p><strong>Address:</strong> Victoria Place, Galway</p>
+                <p><strong>Must-try:</strong> Galway Bay oysters with champagne mignonette</p>
+            </div>
+
+            <h2>Day Two: Modern Irish Cuisine</h2>
+            <p>The second day was dedicated to exploring how modern Irish chefs are reimagining traditional cuisine. I discovered innovative takes on classic dishes, where ancient recipes meet contemporary cooking techniques. The highlight was a tasting menu that featured foraged ingredients from the Burren, demonstrating the incredible diversity of Ireland's natural larder.</p>
+
+            <h2>Hidden Gems</h2>
+            <p>Beyond the well-known establishments, Galway's side streets hide some remarkable food spots. I found a tiny bakery making traditional soda bread using a 100-year-old family recipe, and a cozy pub where the seafood chowder rivals any I've tasted in my culinary travels.</p>
+
+            <h2>Planning Your Visit</h2>
+            <p>If you're planning your own food adventure in Galway, I recommend:</p>
+            <ul>
+                <li>Visiting the market on weekend mornings for the best selection</li>
+                <li>Making dinner reservations in advance, especially during festival season</li>
+                <li>Taking a food tour to discover hidden gems with local experts</li>
+                <li>Trying at least one seafood dish - Galway's coastal location means the seafood is incredibly fresh</li>
+            </ul>
+
+            <p>Galway's food scene is a beautiful reflection of Ireland's culinary evolution - respectful of tradition while embracing innovation. Whether you're a food enthusiast or simply looking for authentic Irish experiences, this city will not disappoint.</p>
+        </article>
+    </main>
+
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Emerald Bites</a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../dishes/index.html">Dishes</a>
+                <a href="../restaurants/index.html">Restaurants</a>
+                <a href="../blog/index.html">Blog</a>
+                <a href="../about.html">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <footer>
+        <div class="container">
+            <p>Emerald Bites: Celebrating the Rich Flavors of Ireland</p>
+            <div class="footer-links">
+                <a href="../about.html">About Us</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../privacy.html">Privacy Policy</a>
+            </div>
+            <div class="social-icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-pinterest"></i>
+            </div>
+            <p>&copy; 2024 Emerald Bites. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html> 

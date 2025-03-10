@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Brazen Head - Emerald Bites</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #005C31; /* Irish green */
+            --secondary-color: #FF883E; /* Warm orange */
+            --accent-color: #F5F5F5; /* Light gray */
+            --text-color: #333333;
+            --light-text: #FFFFFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #FAFAFA;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        nav {
+            background-color: #FFFFFF;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary-color);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 2rem 0;
+        }
+        
+        .hero-img {
+            height: 400px;
+            background-color: #DDD;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .rating {
+            color: var(--secondary-color);
+            margin: 1rem 0;
+            font-size: 1.2rem;
+        }
+        
+        .restaurant-info {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .info-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-divider {
+            height: 3px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            margin: 3rem 0;
+            border-radius: 3px;
+        }
+        
+        .menu-highlights {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .dish-card {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #EEE;
+        }
+        
+        .dish-card:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .dish-img {
+            width: 100px;
+            height: 100px;
+            background-color: #DDD;
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+        }
+        
+        .dish-content h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        
+        .dish-price {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .reviews {
+            margin: 2rem 0;
+        }
+        
+        .review-card {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .reviewer {
+            font-weight: 600;
+        }
+        
+        .review-date {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-img {
+            height: 200px;
+            background-color: #DDD;
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.03);
+        }
+        
+        .map-container {
+            height: 400px;
+            background-color: #DDD;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #004525;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+        
+        .footer-links a {
+            color: var(--light-text);
+            text-decoration: none;
+        }
+        
+        .social-icons {
+            margin: 1rem 0;
+        }
+        
+        .social-icons i {
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .dish-card {
+                grid-template-columns: 1fr;
+            }
+            
+            .dish-img {
+                width: 100%;
+                height: 150px;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">Emerald Bites</a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../dishes/index.html">Dishes</a>
+                <a href="../restaurants/index.html">Restaurants</a>
+                <a href="../culture/index.html">Culture</a>
+                <a href="../about.html">About</a>
+            </div>
+        </div>
+    </nav>
+    
+    <header>
+        <div class="container">
+            <h1>The Brazen Head</h1>
+            <p>Ireland's Oldest Pub - Established 1198</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="hero">
+            <div class="hero-img" style="background-image: url('../images/brazen-head.jpg');"></div>
+            <div class="hero-content">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.5/5 (843 reviews)</span>
+                </div>
+                <p>Step through the doors of The Brazen Head and you're walking into over 800 years of Irish history. Established in 1198, this is Ireland's oldest pub, a place where time seems to stand still while the world outside continues to change.</p>
+                <p>Located in the heart of Dublin, The Brazen Head offers not just authentic Irish cuisine but a genuine slice of Irish culture, with traditional music sessions, storytelling evenings, and a warm, convivial atmosphere that has welcomed locals and visitors alike for centuries.</p>
+            </div>
+        </div>
+        
+        <div class="restaurant-info">
+            <h2>Restaurant Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Location</h3>
+                    <p>20 Lower Bridge Street, Dublin 8, Ireland</p>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Hours</h3>
+                    <p>Mon-Thu: 10:30am-11:30pm<br>Fri-Sat: 10:30am-12:30am<br>Sun: 12:00pm-11:00pm</p>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Contact</h3>
+                    <p>+353 1 679 5186<br>info@brazenhead.com</p>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-euro-sign"></i>
+                    </div>
+                    <h3>Price Range</h3>
+                    <p>€€ - €€€</p>
+                </div>
+            </div>
+        </div>
+        
+        <section>
+            <h2>Our Review</h2>
+            <p>The Brazen Head isn't just a restaurant or a pub—it's a living museum, a cultural institution, and a culinary landmark all rolled into one. While many historic establishments rest on their laurels, trading solely on their heritage, The Brazen Head continues to deliver quality food and an authentic experience that keeps both locals and tourists coming back.</p>
+            <p>The pub's stone walls, wooden beams, and cozy nooks create an atmosphere that's both intimate and communal. On any given night, you might find yourself sharing a table with visitors from around the world, all drawn by the pub's legendary status and the promise of good food and better craic (Irish for fun and entertainment).</p>
+            <p>What truly sets The Brazen Head apart is how it balances its historic significance with a commitment to serving excellent traditional Irish cuisine. The kitchen takes pride in using locally sourced ingredients to create dishes that honor Ireland's culinary heritage while satisfying modern palates.</p>
+        </section>
+        
+        <div class="section-divider"></div>
+        
+        <section class="menu-highlights">
+            <h2>Menu Highlights</h2>
+            
+            <div class="dish-card">
+                <div class="dish-img" style="background-image: url('../images/brazen-head-stew.jpg');"></div>
+                <div class="dish-content">
+                    <h3>Traditional Irish Stew</h3>
+                    <div class="dish-price">€16.95</div>
+                    <p>Their signature dish features tender chunks of lamb slow-cooked with root vegetables in a rich, flavorful broth. Served with homemade brown bread, it's the perfect introduction to authentic Irish cuisine.</p>
+                </div>
+            </div>
+            
+            <div class="dish-card">
+                <div class="dish-img" style="background-image: url('../images/brazen-head-boxty.jpg');"></div>
+                <div class="dish-content">
+                    <h3>Seafood Boxty</h3>
+                    <div class="dish-price">€18.50</div>
+                    <p>A creative twist on the traditional Irish potato pancake, filled with fresh Atlantic seafood in a creamy white wine sauce. The contrast between the crispy boxty and the delicate seafood is simply divine.</p>
+                </div>
+            </div>
+            
+            <div class="dish-card">
+                <div class="dish-img" style="background-image: url('../images/brazen-head-coddle.jpg');"></div>
+                <div class="dish-content">
+                    <h3>Dublin Coddle</h3>
+                    <div class="dish-price">€15.95</div>
+                    <p>This hearty Dublin specialty combines slow-cooked sausages, bacon, potatoes, and onions in a savory broth. The Brazen Head's version is particularly noteworthy for its depth of flavor and generous portions.</p>
+                </div>
+            </div>
+            
+            <div class="dish-card">
+                <div class="dish-img" style="background-image: url('../images/brazen-head-pudding.jpg');"></div>
+                <div class="dish-content">
+                    <h3>Bread and Butter Pudding</h3>
+                    <div class="dish-price">€7.95</div>
+                    <p>A classic Irish dessert elevated to new heights, with layers of buttered bread, plump raisins, and a rich custard infused with vanilla and whiskey. Served warm with a scoop of vanilla ice cream.</p>
+                </div>
+            </div>
+        </section>
+        
+        <div class="section-divider"></div>
+        
+        <section>
+            <h2>History & Cultural Significance</h2>
+            <p>The Brazen Head's history is intertwined with that of Dublin itself. Originally established as a coaching inn in 1198, it has witnessed nearly a millennium of Irish history, from medieval times through the Viking and Norman invasions, the various rebellions against British rule, and the birth of the Irish Republic.</p>
+            <p>Over the centuries, the pub has welcomed many notable patrons, including revolutionary leaders like Robert Emmet and Wolfe Tone, and literary giants such as James Joyce, Jonathan Swift, and Brendan Behan. Joyce even mentioned The Brazen Head in his masterpiece "Ulysses."</p>
+            <p>Today, The Brazen Head continues its tradition as a gathering place for storytelling, music, and conviviality. The pub hosts regular traditional Irish music sessions that showcase the best of Ireland's musical heritage, as well as storytelling evenings where visitors can immerse themselves in Irish folklore and mythology.</p>
+        </section>
+        
+        <div class="section-divider"></div>
+        
+        <section class="reviews">
+            <h2>Customer Reviews</h2>
+            
+            <div class="review-card">
+                <div class="review-header">
+                    <span class="reviewer">Sarah Johnson, USA</span>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="review-date">April 5, 2024</span>
+                </div>
+                <p>"Visiting The Brazen Head was the highlight of our trip to Dublin! The atmosphere is exactly what you'd hope for in Ireland's oldest pub—authentic, cozy, and full of character. We had the Irish stew and seafood boxty, both of which were exceptional. The live music in the evening made for an unforgettable experience. Don't miss this historic gem!"</p>
+            </div>
+            
+            <div class="review-card">
+                <div class="review-header">
+                    <span class="reviewer">Thomas O'Reilly, Ireland</span>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <span class="review-date">March 17, 2024</span>
+                </div>
+                <p>"As a Dublin local, I've been coming to The Brazen Head for years, and it never disappoints. Yes, it can get crowded with tourists, but that's part of its charm—people from all over the world coming together over good food and drink. Their Dublin Coddle is the best in the city, and the staff are always friendly despite how busy it gets. A true Dublin institution."</p>
+            </div>
+            
+            <div class="review-card">
+                <div class="review-header">
+                    <span class="reviewer">Akiko Tanaka, Japan</span>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="review-date">February 22, 2024</span>
+                </div>
+                <p>"I was recommended The Brazen Head by a friend who studied in Dublin, and it exceeded all expectations. The historic building itself is fascinating, and the food was a wonderful introduction to Irish cuisine. I especially loved the bread and butter pudding—so comforting! The storytelling session we attended was magical and gave us insight into Irish culture beyond the typical tourist experience."</p>
+            </div>
+        </section>
+        
+        <div class="section-divider"></div>
+        
+        <section>
+            <h2>Photo Gallery</h2>
+            <div class="gallery">
+                <div class="gallery-img" style="background-image: url('../images/brazen-head-exterior.jpg');"></div>
+                <div class="gallery-img" style="background-image: url('../images/brazen-head-interior.jpg');"></div>
+                <div class="gallery-img" style="background-image: url('../images/brazen-head-music.jpg');"></div>
+                <div class="gallery-img" style="background-image: url('../images/brazen-head-food.jpg');"></div>
+            </div>
+        </section>
+        
+        <div class="section-divider"></div>
+        
+        <section>
+            <h2>Location & Directions</h2>
+            <p>The Brazen Head is conveniently located in Dublin's historic center, just a short walk from many major attractions including Christ Church Cathedral, Guinness Storehouse, and Temple Bar.</p>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2382.1550053886747!2d-6.2793848!3d53.3449051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670c2d0358c35f%3A0x3d5c710b6d8c2b47!2sThe%20Brazen%20Head!5e0!3m2!1sen!2sus!4v1651234567890!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <h3>Getting There</h3>
+            <p><strong>By Bus:</strong> Routes 25, 25a, 25b, 26, 66, 67 stop nearby at Merchant's Quay.</p>
+            <p><strong>By Tram:</strong> The closest Luas stop is Four Courts on the Red Line, a 5-minute walk away.</p>
+            <p><strong>By Foot:</strong> 10-minute walk from Temple Bar, 15-minute walk from Trinity College.</p>
+            
+            <h3>Reservations</h3>
+            <p>Reservations are recommended, especially for dinner and on weekends. You can book a table through their website or by calling +353 1 679 5186.</p>
+            
+            <a href="https://www.brazenhead.com" target="_blank" class="btn">Visit Official Website</a>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>Emerald Bites: Celebrating the Rich Flavors of Ireland</p>
+            <div class="footer-links">
+                <a href="../about.html">About Us</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../privacy.html">Privacy Policy</a>
+            </div>
+            <div class="social-icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-pinterest"></i>
+            </div>
+            <p>&copy; 2024 Emerald Bites. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

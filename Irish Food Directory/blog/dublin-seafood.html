@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dublin's Best Seafood Spots - Emerald Bites</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .blog-hero {
+            height: 60vh;
+            background-image: url('../images/blog/dublin-seafood.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .blog-title {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            text-align: center;
+            width: 100%;
+            padding: 0 1rem;
+        }
+
+        .blog-meta {
+            color: var(--accent-color);
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+            line-height: 1.8;
+        }
+
+        .blog-content h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .restaurant-highlight {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .restaurant-highlight h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .seafood-tips {
+            background: var(--accent-color);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .seafood-tips h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .seafood-tips ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .seafood-tips li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .seafood-tips li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Emerald Bites</a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../dishes/index.html">Dishes</a>
+                <a href="../restaurants/index.html">Restaurants</a>
+                <a href="../blog/index.html">Blog</a>
+                <a href="../about.html">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="blog-hero">
+        <div class="blog-title">
+            <h1>Dublin's Best Seafood Spots</h1>
+            <div class="blog-meta">
+                <i class="far fa-calendar"></i> March 10, 2024
+                <span class="location-tag"><i class="fas fa-map-marker-alt"></i> Dublin</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <article class="blog-content" data-aos="fade-up">
+            <p>Dublin, with its prime coastal location, has always been a haven for seafood lovers. From traditional fish and chips to sophisticated seafood restaurants, the city offers an incredible variety of ways to enjoy the bounty of the Irish Sea. Join me as I explore some of the capital's finest seafood establishments.</p>
+
+            <h2>Traditional Favorites</h2>
+            <p>Dublin's seafood scene is deeply rooted in tradition, with many establishments passing down their recipes through generations. The city's relationship with the sea is evident in every corner, from the historic fishing village of Howth to the bustling city center restaurants.</p>
+
+            <div class="restaurant-highlight">
+                <h3>The Brazen Head</h3>
+                <p>While known primarily as Ireland's oldest pub, The Brazen Head serves some of the city's finest seafood dishes. Their seafood chowder, in particular, is a must-try, perfectly capturing the essence of Irish coastal cuisine.</p>
+                <p><strong>Address:</strong> 20 Lower Bridge Street, Dublin 8</p>
+                <p><strong>Signature Dish:</strong> Dublin Bay Seafood Chowder</p>
+            </div>
+
+            <h2>Modern Interpretations</h2>
+            <p>Contemporary Dublin chefs are reimagining seafood dishes, combining traditional techniques with modern presentation and international influences. These innovative approaches are breathing new life into classic Irish seafood recipes.</p>
+
+            <div class="seafood-tips">
+                <h3>When to Eat What: Dublin's Seafood Calendar</h3>
+                <ul>
+                    <li>Spring: Dublin Bay Prawns are at their best</li>
+                    <li>Summer: Perfect time for fresh lobster</li>
+                    <li>Autumn: Native oyster season begins</li>
+                    <li>Winter: Ideal for hearty seafood chowders</li>
+                </ul>
+            </div>
+
+            <h2>Hidden Gems</h2>
+            <p>Beyond the well-known establishments, Dublin's side streets hide some remarkable seafood spots. I've discovered family-run restaurants serving the freshest catch of the day, and modern bistros offering innovative seafood tapas.</p>
+
+            <h2>Sustainable Seafood</h2>
+            <p>Many Dublin restaurants are now focusing on sustainability, working directly with local fishermen and choosing seasonal catches. This commitment to responsible sourcing not only helps preserve marine resources but also ensures the highest quality seafood on your plate.</p>
+
+            <h2>Tips for Seafood Lovers</h2>
+            <ul>
+                <li>Visit Howth for the freshest seafood and beautiful coastal views</li>
+                <li>Try the oysters when in season (September to April)</li>
+                <li>Don't miss the traditional Dublin Bay Prawns</li>
+                <li>Ask about the catch of the day - it's often the best choice</li>
+            </ul>
+
+            <p>Whether you're a seafood connoisseur or just beginning to explore the world of marine cuisine, Dublin's seafood scene has something for everyone. From casual fish and chips to high-end dining experiences, the city's restaurants showcase the best of Ireland's coastal bounty.</p>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Emerald Bites: Celebrating the Rich Flavors of Ireland</p>
+            <div class="footer-links">
+                <a href="../about.html">About Us</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../privacy.html">Privacy Policy</a>
+            </div>
+            <div class="social-icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-pinterest"></i>
+            </div>
+            <p>&copy; 2024 Emerald Bites. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html> 

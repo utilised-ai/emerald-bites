@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Sarah O'Connor - Emerald Bites</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .author-hero {
+            height: 60vh;
+            background-image: url('../images/author/sarah-oconnor.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .author-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .author-title {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            text-align: center;
+            width: 100%;
+            padding: 0 1rem;
+        }
+
+        .author-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+            line-height: 1.8;
+        }
+
+        .author-content h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .author-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-highlight {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .experience-highlight h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .achievement-card {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .achievement-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="author-hero">
+        <div class="author-title">
+            <h1>Sarah O'Connor</h1>
+            <p>Food Writer & Culinary Explorer</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <article class="author-content" data-aos="fade-up">
+            <h2>About Me</h2>
+            <p>Hello! I'm Sarah O'Connor, a Dublin-based food writer with a passion for discovering and sharing Ireland's rich culinary heritage. For over a decade, I've been exploring the length and breadth of Ireland, from cozy rural pubs to Michelin-starred restaurants, documenting the evolution of Irish cuisine and the stories behind our food.</p>
+
+            <div class="experience-highlight">
+                <h3>Professional Background</h3>
+                <p>With a background in both professional cooking and food journalism, I bring a unique perspective to Irish food writing. After training at the Ballymaloe Cookery School and working in several notable Irish restaurants, I turned my attention to food writing, contributing to various national and international publications.</p>
+            </div>
+
+            <h2>My Journey</h2>
+            <p>My love for food began in my grandmother's kitchen in County Kerry, where I learned the importance of seasonal ingredients and traditional cooking methods. This early exposure to authentic Irish cooking has shaped my approach to food writing, always seeking to highlight the connection between our culinary heritage and modern innovations.</p>
+
+            <div class="achievements">
+                <div class="achievement-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Food Writing Awards</h3>
+                    <p>Multiple Irish Food Writing Awards recipient</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Published Work</h3>
+                    <p>Author of "Modern Irish Kitchen"</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Culinary Experience</h3>
+                    <p>Trained at Ballymaloe Cookery School</p>
+                </div>
+            </div>
+
+            <h2>My Mission</h2>
+            <p>Through Emerald Bites, I aim to showcase the best of Irish cuisine, from traditional dishes to modern interpretations. My goal is to help readers discover the incredible depth and diversity of Ireland's food scene, while supporting local producers and restaurants who are passionate about quality and sustainability.</p>
+
+            <h2>Let's Connect</h2>
+            <p>I love hearing from fellow food enthusiasts! Whether you have a question about Irish cuisine, want to share your own food discoveries, or are interested in collaboration opportunities, feel free to reach out.</p>
+
+            <div class="social-links">
+                <a href="https://twitter.com/sarahoc_food" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/sarahoc_food" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/in/sarahoc-food" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:sarah@emeraldbites.ie"><i class="fas fa-envelope"></i></a>
+            </div>
+        </article>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html> 
