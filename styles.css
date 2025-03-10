@@ -1,0 +1,24 @@
+:root {
+    --primary-color: #005C31; /* Irish green */
+    --secondary-color: #FF883E; /* Warm orange */
+    --accent-color: #F5F5F5; /* Light gray */
+    --text-color: #333333;
+    --light-text: #FFFFFF;
+    --transition: all 0.3s ease;
+    --bg-light: #f8f9fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #FAFAFA;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Rest of styles.css content */
